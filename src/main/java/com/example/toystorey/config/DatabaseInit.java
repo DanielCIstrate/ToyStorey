@@ -15,12 +15,6 @@ import javax.transaction.Transactional;
 @Component
 public class DatabaseInit implements ApplicationRunner {
 
-//    private EntityManager entityManager;
-//
-//    @Autowired
-//    public DatabaseInit(EntityManager entityManager) {
-//        this.entityManager = entityManager;
-//    }
 
     private ImageRepository imageRepository;
     private ProductRepository productRepository;
