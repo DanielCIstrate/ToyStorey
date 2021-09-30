@@ -36,8 +36,8 @@ public class DatabaseInit implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         Product tricicletaAlba = new Product("Tricicleta alba",329.99);
         Product tricletaRosie = new Product("Tricicleta rosie", 159.99);
-        ToyImage pozica = new ToyImage("path1");
-        ToyImage poza2 = new ToyImage("path2");
+        ToyImage pozica = new ToyImage();
+        ToyImage poza2 = new ToyImage();
         tricicletaAlba.setToyImage(pozica);
         tricletaRosie.setToyImage(poza2);
 
