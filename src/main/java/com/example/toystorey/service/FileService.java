@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class FileService {
+public class FileService implements FileStoreInterface{
 
     private final ImageRepository imageRepository;
 
@@ -21,6 +21,7 @@ public class FileService {
         this.imageRepository = imageRepository;
     }
 
+    @Override
     public void save(MultipartFile file) throws IOException {
         ToyImage toyImage = new ToyImage();
         toyImage.setName(StringUtils.cleanPath(file.getOriginalFilename()));
@@ -36,5 +37,10 @@ public class FileService {
 
     public List<ToyImage> getAllToyImages() {
         return imageRepository.findAll();
+    }
+
+    @Override
+    public String getImageURLByID(Long id) {
+        return "";
     }
 }
