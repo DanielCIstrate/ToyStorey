@@ -3,11 +3,6 @@ import {useState} from "react";
 
 const Navbar = () => {
     const logoStyle = {maxHeight: "20vh"};
-    // const burgerIcon = document.querySelector('#burger');
-    // const navbarMenu = document.querySelector('#nav-links');
-    // burgerIcon.addEventListener('click', () => {
-    //     navbarMenu.classList.toggle('is-active');
-    // });
     const [navbarMenuAddOnClass, setNavbarMenuAddOnClass] = useState("");
     function toggleNavbarBurgerMenu(event) {
         if (navbarMenuAddOnClass === "") {
@@ -31,7 +26,7 @@ const Navbar = () => {
                 </a>
             </div>
 
-            <div className={"navbar-menu" + " " + navbarMenuAddOnClass } id="nav-links">
+            <div className={ "navbar-menu" + " " + navbarMenuAddOnClass } id="nav-links">
                 <div className="navbar-end">
                     <a className="navbar-item">
                         My Account
