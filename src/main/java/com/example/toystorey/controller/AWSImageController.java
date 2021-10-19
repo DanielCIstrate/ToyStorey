@@ -12,14 +12,14 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/toy_image")
+@RequestMapping("api/v1/product")
 @AllArgsConstructor
 @CrossOrigin("*")
 public class AWSImageController {
     AWSFileService fileService;
 
     @GetMapping
-    public ResponseEntity<List<AWSImage>> getToyImages() {
+    public ResponseEntity<List<AWSImage>> getProductImages() {
         return new ResponseEntity<>(fileService.getAllAWSImages(), HttpStatus.OK);
     }
 
@@ -35,7 +35,7 @@ public class AWSImageController {
     }
 
     @GetMapping(value = "{id}/image/download")
-    public byte[] downloadToyImage(@PathVariable("id") Long id) {
+    public byte[] downloadProductImage(@PathVariable("id") Long id) {
         return fileService.downloadAWSImage(id);
     }
 
