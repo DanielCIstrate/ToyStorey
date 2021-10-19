@@ -23,18 +23,13 @@ public class DatabaseInit implements ApplicationRunner {
     @Override
     @Transactional
     public void run(ApplicationArguments args) throws Exception {
-        Product bowlingSet = new ToyProduct(null,"Bowling set", 80.00,4);
-        Product doctorSet = new ToyProduct(null,"Set doctor", 125.00, 6);
-        Product cardSet = new ToyProduct(null,"Playing cards", 20.00,7);
-
-        productRepository.save(bowlingSet);
-        productRepository.save(doctorSet);
-        productRepository.save(cardSet);
-
-
-
-
-
+//        Product bowlingSet = new ToyProduct(null,"Bowling set", 80.00,4);
+//        Product doctorSet = new ToyProduct(null,"Set doctor", 125.00, 6);
+//        Product cardSet = new ToyProduct(null,"Playing cards", 20.00,7);
+//
+//        productRepository.save(bowlingSet);
+//        productRepository.save(doctorSet);
+//        productRepository.save(cardSet);
 
     }
 }
