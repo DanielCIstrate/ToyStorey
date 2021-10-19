@@ -1,3 +1,5 @@
+import {useEffect, useState} from "react";
+
 const ProductInformation = () => {
     const componentStyle = {marginTop: "20px"};
     const priceStyle = {marginTop: "0px"}
@@ -11,7 +13,7 @@ const ProductInformation = () => {
                         <p>Here comes some description about the product</p>
                     </div>
                     <div className="column is-5-desktop is-size-6-tablet has-text-centered">
-                        <img src="/img/toy_image_2.jpg" alt="a red tricycle for toddlers" className="px-4"/>
+                        <img src="http://localhost:8080/api/v1/product/1/image/download" alt="a red tricycle for toddlers" className="px-4"/>
                     </div>
                     <div className="column is-12-tablet is-4-desktop">
                         <div className="is-size-4-desktop mb-4" style={priceStyle}>
