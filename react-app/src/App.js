@@ -5,6 +5,7 @@ import ProductInformation from "./Components/ProductInformation";
 import DeliveryDetails from "./Components/DeliveryDetails";
 import MessageBox from "./Components/MessageBox";
 import {useState, useEffect} from "react";
+import Products from "./Components/Products";
 
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <ProductInformation/>
-      <DeliveryDetails/>
+      {/*<ProductInformation/>*/}
+      {/*<DeliveryDetails/>*/}
+        <Products/>
 
     </div>
   );

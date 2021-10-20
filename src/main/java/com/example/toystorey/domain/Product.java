@@ -1,5 +1,6 @@
 package com.example.toystorey.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
-    @MappedSuperclass
-    public abstract class Product implements Serializable {
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    @Entity
+    public class Product implements Serializable {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "id")
@@ -18,14 +20,16 @@ import java.io.Serializable;
 
         private String name;
         private Double price;
+        private String Description;
 
         public Product() {
         }
 
-        public Product(Long id, String name, Double price) {
+        public Product(Long id, String name, Double price, String description) {
             this.id = id;
             this.name = name;
             this.price = price;
+            Description = description;
         }
 
         public Long getId() {
@@ -50,5 +54,14 @@ import java.io.Serializable;
 
         public void setPrice(Double price) {
             this.price = price;
+        }
+
+
+        public String getDescription() {
+            return Description;
+        }
+
+        public void setDescription(String description) {
+            Description = description;
         }
     }
