@@ -11,6 +11,8 @@ const Navbar = () => {
             setNavbarMenuAddOnClass("");
         }
     }
+
+    const navbarItemStyle = "navbar-item is-size-6-desktop is-size-4-tablet is-size-5-mobile";
     return (
         <div className="navbar has-shadow is-white">
             <div className="navbar-brand">
@@ -28,13 +30,13 @@ const Navbar = () => {
 
             <div className={ "navbar-menu" + " " + navbarMenuAddOnClass } id="nav-links">
                 <div className="navbar-end">
-                    <a className="navbar-item">
+                    <a className={navbarItemStyle}>
                         My Account
                     </a>
-                    <a className="navbar-item">
+                    <a className={navbarItemStyle}>
                         Shopping Cart (0)
                     </a>
-                    <a className="navbar-item">
+                    <a className={navbarItemStyle}>
                         About
                     </a>
                 </div>

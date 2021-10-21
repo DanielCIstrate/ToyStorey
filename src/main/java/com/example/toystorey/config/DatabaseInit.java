@@ -23,7 +23,7 @@ public class DatabaseInit implements ApplicationRunner {
     @Transactional
     public void run(ApplicationArguments args) throws Exception {
 //        Product bowlingSet = new Product(null,"Bowling set", 80.00,"descriptionForBowlingSet");
-//        Product doctorSet = new Product(null,"Set doctor", 125.00, "descriptionForDoctorSet");
+//        Product doctorSet = new Product(null,"Doctor set", 125.00, "descriptionForDoctorSet");
 //        Product cardSet = new Product(null,"Playing cards", 20.00,"description for playing cards");
 //
 //        productRepository.save(bowlingSet);

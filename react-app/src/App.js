@@ -23,7 +23,15 @@ function App() {
       <Navbar/>
       {/*<ProductInformation/>*/}
       {/*<DeliveryDetails/>*/}
-        <Products/>
+      <section className="section">
+          <div className="container">
+              <div className="columns is-multiline">
+                  <Products/>
+              </div>
+
+          </div>
+      </section>
+
 
     </div>
   );
