@@ -1,5 +1,6 @@
-import logo from "../assets/Logo.jpg"
+import logo from "../assets/Logo2.png"
 import {useState} from "react";
+import CartDropdown from "./CartDropdown";
 
 const Navbar = () => {
     const logoStyle = {maxHeight: "20vh"};
@@ -33,7 +34,7 @@ const Navbar = () => {
                     <a className={navbarItemStyle}>
                         My Account
                     </a>
-                    <a className={navbarItemStyle}>
+                    <a href="#/cart" className={navbarItemStyle}>
                         Shopping Cart (0)
                     </a>
                     <a className={navbarItemStyle}>
