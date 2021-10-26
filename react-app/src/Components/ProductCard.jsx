@@ -13,7 +13,7 @@ const ProductCard = (props) => {
                     </p>
                     <p className="is-size-3 has-text-weight-bold has-text-danger">{props.price} Lei</p>
                 </div>
-                <button className="button is-primary mt-3 mb-6">Add to cart</button>
+                <button onClick={() => props.onAdd(props.product)} className="button is-primary mt-3 mb-6">Add to cart</button>
             </div>
     )
 }
